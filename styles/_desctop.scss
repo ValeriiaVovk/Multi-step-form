@@ -1,0 +1,413 @@
+// ASIDE
+
+.sidebar {
+    background: url(../images/aside_bg.png);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    min-width: 274px;
+    height: 568px;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 89px;
+
+    &_steps {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &-number {
+            border-radius: 100%;
+            border: 1px solid $white;
+            width: 33px;
+            height: 33px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                font-weight: 700;
+                letter-spacing: 0.07em;
+                text-transform: uppercase;
+                text-align: center;
+                color: $white;
+            }
+        }
+
+        &-info {
+
+            &-order {
+                font-size: 12px;
+                color: $light-blue;
+                margin-bottom: 4px;
+            }
+
+            &-name {
+                font-weight: 700;
+                letter-spacing: 0.07em;
+                text-transform: uppercase;
+                color: $white;
+            }
+        }
+    }
+}
+
+.active-step {
+    border: none;
+    background-color: $sky-blue;
+}
+
+.active-step p {
+    color: $denim;
+}
+
+.step {
+    padding: 40px 84px 16px 100px;
+    position: relative;
+
+    &_title {
+        font-weight: 700;
+        font-size: 32px;
+        margin-bottom: 11px;
+    }
+
+    &_info {
+        font-size: 16px;
+        line-height: 156%;
+        color: $grey;
+        margin-bottom: 40px;
+    }
+}
+
+.personal {
+    margin-bottom: 68px;
+    display: flex;
+    flex-direction: column;
+
+
+    &_info {
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+
+        &-input {
+            margin-bottom: 24px;
+            width: 450px;
+            height: 48px;
+            border: 1px solid $border-color;
+            border-radius: 8px;
+            background: $white;
+            padding: 11px 16px;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+            color: $denim;
+            outline: none;
+        }
+
+        &-input:hover,
+        &-input:focus,
+        &-input:focus-visible {
+            border: 1px solid $purple;
+        }
+
+    }
+
+}
+
+.error {
+    color: $red-errors;
+    font-weight: 700;
+    display: none;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+    color: $grey;
+}
+
+.choose-plan {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+.plan {
+    display: none;
+}
+
+.plan_type {
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    width: 138px;
+    height: 183px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px 16px 16px;
+
+    img {
+        margin-bottom: 39px;
+    }
+
+    &-name {
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    &-price {
+        color: $grey;
+        margin-bottom: 6px;
+    }
+
+    &-free {
+        font-size: 12px;
+    }
+}
+.plan:checked + label {
+    border: 1px solid $purple;
+    background: $very-light-grey;
+}
+
+.plan_type:hover {
+    border: 1px solid $purple;
+}
+
+.toggle-switch {
+    // display: inline-block;
+    position: relative;
+    border-radius: 8px;
+    width: 450px;
+    height: 48px;
+    background: $very-light-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // gap: 24px;
+    margin-bottom: 116px;
+}
+  
+.toggle-input {
+    display: none;
+}
+  
+.toggle-label {
+    display: block;
+    width: 38px; /* Width of the toggle switch */
+    height: 20px; /* Height of the toggle switch */
+    background: $denim;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+  
+.toggle-label:before {
+    content: '';
+    position: absolute;
+    width: 12px; /* Width of the toggle knob */
+    height: 12px; /* Height of the toggle knob */
+    background-color: white;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    transition: 0.3s;
+}
+  
+.toggle-input:checked + .toggle-label:before {
+    left: 18px; /* Move the toggle knob to the right */
+}
+  
+.toggle-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    // text-align: right;
+    color: $grey;
+}
+
+.toggle-text-active {
+    color: $denim;
+}
+  
+.toggle-text--left {
+    left: -80px;
+}
+  
+.toggle-text--right {
+    right: -64px;
+}
+
+.add_extra {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 81px;
+
+    &-point {
+        display: flex;
+        align-items: center;
+        padding: 16px 24px 20px 24px;
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        background: $white;
+
+        input {
+            width: 20px;
+            height: 20px;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            padding-left: 24px;
+            padding-right: 127px;
+
+            &_type {
+                font-weight: 500;
+                font-size: 16px;
+            }
+
+            &_details {
+                width: 191px;
+                line-height: 143%;
+                color: $grey;
+            }
+        }
+
+        &-price {
+            line-height: 143%;
+            color: $purple;
+        }
+    }
+}
+
+.add_extra-point:hover {
+    border: 1px solid $purple;
+}
+
+.add_extra-point.checked {
+    border: 1px solid $purple;
+    border-radius: 8px;
+    background: $very-light-grey;
+}
+
+.summary_info {
+    border-radius: 8px;
+    width: 450px;
+    background: $very-light-grey;
+    padding: 16px 24px 24px 24px;
+    margin-bottom: 24px;
+
+    &-plan {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(150, 153, 171, 0.2);
+        margin-bottom: 16px;
+
+        &-more {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+
+            p {
+                font-weight: 500;
+                font-size: 16px; 
+            }
+
+            a {
+                line-height: 143%;
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                color: $grey;
+            }
+
+            a:hover {
+                color: $purple;
+            }
+        }
+
+        &-price {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 125%;
+            text-align: right;
+        }
+    }
+
+
+    &-extra {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        &-title {
+            line-height: 143%;
+            color: $grey;
+        }
+
+        &-price {
+            line-height: 143%;
+        }
+
+    }
+    
+}
+
+.summary_price {
+    width: 402px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+    &-title {
+        line-height: 143%;
+        color: $grey;
+    }
+
+    &-number {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        text-align: right;
+        color: $purple;
+    }
+}
+
+
+.confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 85px;
+
+    img {
+        margin-bottom: 32px;
+        width: 80px;
+        height: 80px;
+    }
+
+    &_title {
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    &_more {
+        font-size: 16px;
+        line-height: 156%;
+        text-align: center;
+        color: $grey;
+    }
+}

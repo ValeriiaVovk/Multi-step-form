@@ -1,0 +1,126 @@
+/* Обнулення  */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $denim;
+    background: $bg;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    
+}
+
+// .step-form {
+//     display: flex;
+//     // margin: 0 auto;
+//     // overflow: hidden;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     height: 100vh;
+//     // width: 100vw;
+//     min-height: 100%;
+// }
+
+.form {
+    box-shadow: 0 25px 40px -20px rgba(0, 0, 0, 0.1);
+    background: $white;
+    border-radius: 15px;
+    max-width: 940px;
+    padding: 16px;
+    display: flex;
+    margin: 0 auto;
+    // height: 100vh;
+    width: 100vw;
+}
+
+
+.step_next {
+    width: 123px;
+    height: 48px;
+    border-radius: 8px;
+    background: $denim;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    color: $white;
+    border: none;
+    position: absolute;
+    right: 84px;
+}
+
+.step_next:hover {
+    background: #164a8a;
+}
+
+.step_prev {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    color: $grey;
+    cursor: pointer;
+    border: none;
+    width: 123px;
+    height: 48px;
+    background: transparent;
+    text-align: left;
+}
+
+.step_prev:hover {
+    color: $denim;
+}
+
+.confirm-btn {
+    background: $purple;
+}
+
+.confirm-btn:hover {
+    background: #928cff;
+}
+
+.step-form {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    // margin-bottom: 20px;
+}
